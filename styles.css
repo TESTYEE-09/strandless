@@ -205,10 +205,12 @@ form button:focus-visible {
 }
 
 .hero-visual {
-  position: relative;
-  min-height: 520px;
   display: grid;
-  place-items: center;
+  justify-items: center;
+  align-content: center;
+  gap: 24px;
+  min-height: 520px;
+  padding: 12px 0;
 }
 
 .device-shell {
@@ -282,11 +284,7 @@ form button:focus-visible {
 }
 
 .signal-card {
-  width: min(330px, 86vw);
-  position: absolute;
-  right: 0;
-  bottom: 32px;
-  pointer-events: none;
+  width: min(430px, 92%);
   padding: 20px;
   border: 3px solid var(--black);
   background: var(--orange);
@@ -493,9 +491,7 @@ input:focus {
   }
 
   .signal-card {
-    left: 14px;
-    right: auto;
-    bottom: 0;
+    width: 100%;
   }
 
   .interest {
