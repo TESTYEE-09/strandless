@@ -3,61 +3,103 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="A tiny 4-button pager for couples and best friends." />
-  <title>TapBack — tiny pings for your favourite person</title>
+  <meta name="description" content="Buttonidea is a tiny four-button desk device for sending instant pings to your favorite person." />
+  <title>Buttonidea - four buttons for faster feelings</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="page">
-    <section class="hero">
-      <p class="eyebrow">tiny pings, big feelings</p>
-      <h1>A 4-button pager for your favourite person.</h1>
-      <p class="subhead">Press a button to send a buzz, a light, and a cute notification — for couples, best friends, and long-distance chaos.</p>
+  <header class="site-header" aria-label="Main navigation">
+    <a class="brand" href="#top" aria-label="Buttonidea home">
+      <span class="brand-mark">B</span>
+      <span>Buttonidea</span>
+    </a>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#interest">Get updates</a>
+    </nav>
+  </header>
 
-      <div class="cta-card" id="interest">
-        <p class="small">early prototype list</p>
-        <h2>Want one?</h2>
-        <form id="interestForm">
-          <input id="email" type="email" placeholder="your email" autocomplete="email" required />
-          <button type="submit">I’m interested</button>
-        </form>
-        <p class="note" id="formNote">No spam. Just updates when the prototype is real.</p>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Hardware concept / early list</p>
+        <h1>Four buttons. One person. No typing.</h1>
+        <p class="subhead">
+          Buttonidea is a pocket-sized desk pager for couples, best friends, and people who want a fast signal that feels more real than a text.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#interest">Join the list</a>
+          <a class="button button-secondary" href="#demo">Try the buttons</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" id="demo" aria-label="Buttonidea device demo">
+        <div class="device-shell">
+          <div class="device-top">
+            <span class="status-dot"></span>
+            <span class="device-label">BUTTONIDEA / 01</span>
+          </div>
+          <div class="button-grid">
+            <button class="ping-button" type="button" data-message="Miss you" aria-label="Send miss you ping">Miss you</button>
+            <button class="ping-button" type="button" data-message="Call me" aria-label="Send call me ping">Call me</button>
+            <button class="ping-button" type="button" data-message="Home safe" aria-label="Send home safe ping">Home safe</button>
+            <button class="ping-button accent" type="button" data-message="Need chaos" aria-label="Send need chaos ping">Chaos</button>
+          </div>
+        </div>
+        <aside class="signal-card" aria-live="polite">
+          <span>Live ping</span>
+          <strong id="livePing">Miss you</strong>
+          <p id="liveCopy">A bright orange pulse appears on their phone and device.</p>
+        </aside>
       </div>
     </section>
 
-    <section class="device-wrap" aria-label="button device preview">
-      <div class="device">
-        <div class="status-light"></div>
-        <button aria-label="I miss you">❤️</button>
-        <button aria-label="Call me">📞</button>
-        <button aria-label="Goodnight">🌙</button>
-        <button aria-label="Chaos ping">😈</button>
+    <section class="strip" aria-label="Product highlights">
+      <span>Custom button meanings</span>
+      <span>Light and buzz feedback</span>
+      <span>Designed for shared rituals</span>
+    </section>
+
+    <section class="how" id="how">
+      <div class="section-heading">
+        <p class="eyebrow">Simple by design</p>
+        <h2>Make tiny moments easier to send.</h2>
       </div>
-      <div class="notification">
-        <span>TapBack</span>
-        <strong>Someone pressed ❤️</strong>
-        <p>“I miss you.”</p>
+      <div class="steps">
+        <article>
+          <span>01</span>
+          <h3>Pair</h3>
+          <p>Link two devices or connect one device to the companion app.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Name</h3>
+          <p>Choose what each button means, from practical check-ins to private jokes.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Ping</h3>
+          <p>Press once and send a buzz, light, and notification without opening chat.</p>
+        </article>
       </div>
+    </section>
+
+    <section class="interest" id="interest">
+      <div>
+        <p class="eyebrow">Prototype updates</p>
+        <h2>Want the first build notes?</h2>
+        <p>Drop your email and the page will remember it on this device while the prototype list is being wired up.</p>
+      </div>
+      <form id="interestForm">
+        <label for="email">Email address</label>
+        <div class="form-row">
+          <input id="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+          <button type="submit">Save interest</button>
+        </div>
+        <p class="form-note" id="formNote">No spam. Just Buttonidea updates.</p>
+      </form>
     </section>
   </main>
-
-  <section class="how">
-    <div>
-      <span>01</span>
-      <h3>Pair</h3>
-      <p>Connect your button to the app.</p>
-    </div>
-    <div>
-      <span>02</span>
-      <h3>Customise</h3>
-      <p>Pick what each of the four buttons means.</p>
-    </div>
-    <div>
-      <span>03</span>
-      <h3>Ping</h3>
-      <p>Send a buzz when a text feels boring.</p>
-    </div>
-  </section>
 
   <script src="script.js"></script>
 </body>
