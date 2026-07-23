@@ -1,0 +1,45 @@
+5 19 29.5S30 34 33 29.5"/><path d="M20 4v32"/></svg>
+      <span>STRANDLESS</span>
+    </a>
+    <div class="footer-links">
+      <div><p>Navigate</p><a href="#shop">Shop</a><a href="#faith">Faith line</a><a href="#story">Story</a></div>
+      <div><p>Follow</p><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Pinterest</a></div>
+      <div><p>Help</p><a href="#">Shipping</a><a href="#">Returns</a><a href="#">Sizing</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Strandless</span>
+      <span>Designed in Australia</span>
+      <span>By Ethan Dart</span>
+    </div>
+  </footer>
+
+  <aside class="cart-drawer" aria-hidden="true" aria-label="Shopping bag">
+    <div class="cart-header"><h2>Your bag</h2><button class="cart-close" type="button">Close</button></div>
+    <div class="cart-items"></div>
+    <div class="cart-empty"><p>Your bag is currently untied.</p><a href="#shop">Explore release 001</a></div>
+    <div class="cart-footer">
+      <div><span>Subtotal</span><strong class="cart-total">$0 AUD</strong></div>
+      <button type="button" class="checkout-button">Checkout</button>
+      <p>Taxes calculated at checkout.</p>
+    </div>
+  </aside>
+  <div class="page-overlay" hidden></div>
+
+  <div class="product-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-name">
+    <button class="modal-close" type="button" aria-label="Close product view">×</button>
+    <div class="modal-art"></div>
+    <div class="modal-copy">
+      <p class="eyebrow">Release 001</p>
+      <h2 id="modal-name"></h2>
+      <p class="modal-price"></p>
+      <p>Relaxed unisex fit with a substantial, everyday feel. Designed in Australia and produced as part of a considered small run.</p>
+      <fieldset class="size-picker"><legend>Select size</legend><label><input type="radio" name="size" value="S">S</label><label><input type="radio" name="size" value="M" checked>M</label><label><input type="radio" name="size" value="L">L</label><label><input type="radio" name="size" value="XL">XL</label></fieldset>
+      <button class="button button-dark modal-add" type="button">Add to bag</button>
+      <details><summary>Details</summary><p>Premium construction, woven neck label and understated Strandless finishing.</p></details>
+      <details><summary>Fit</summary><p>Relaxed fit. Take your normal size or size up for an oversized look.</p></details>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
