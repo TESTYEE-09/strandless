@@ -1,0 +1,68 @@
+
+.campaign-image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .9s cubic-bezier(.2,.75,.2,1); }
+.campaign-image:hover img { transform: scale(1.02); }
+.campaign-image figcaption { position: absolute; left: 18px; bottom: 15px; padding: 7px 9px; color: white; background: rgba(20,20,18,.42); backdrop-filter: blur(10px); font-size: 8px; letter-spacing: .13em; text-transform: uppercase; }
+.campaign-image-wide { grid-column: 2; grid-row: 1 / span 2; min-height: 880px; }
+.campaign-image-wide img { object-position: center; }
+.campaign-image-detail { grid-column: 1; grid-row: 2; width: 67%; justify-self: end; aspect-ratio: .8; z-index: 2; }
+.campaign-wordmark { position: absolute; left: -1vw; bottom: -1.1vw; font: 600 clamp(76px, 14vw, 230px)/.75 "Manrope", sans-serif; letter-spacing: -.08em; color: rgba(25,26,22,.055); white-space: nowrap; pointer-events: none; }
+
+.story-section { padding: 150px 4vw; display: grid; grid-template-columns: 1fr 1.25fr; gap: 9vw; }
+.story-body { padding-top: 48px; }
+.story-lead { font: 500 clamp(27px, 3vw, 44px)/1.15 "Manrope", sans-serif; letter-spacing: -.035em; max-width: 760px; margin: 0 0 55px; }
+.story-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 42px; max-width: 760px; margin-bottom: 52px; }
+.story-columns p { margin: 0; font-size: 14px; line-height: 1.7; color: rgba(25,26,22,.64); }
+
+.newsletter { padding: 120px 4vw 130px; background: var(--clay); color: #f8eee6; text-align: center; }
+.newsletter h2 { margin: 29px 0 50px; font: 500 clamp(55px, 8vw, 120px)/.9 "Manrope", sans-serif; letter-spacing: -.075em; }
+.newsletter-form { width: min(700px, 100%); margin: 0 auto; display: flex; border-bottom: 1px solid rgba(255,255,255,.75); }
+.newsletter-form input { flex: 1; min-width: 0; border: 0; background: transparent; color: inherit; font-size: 16px; padding: 18px 0; outline: 0; }
+.newsletter-form input::placeholder { color: rgba(255,255,255,.58); }
+.newsletter-form button { border: 0; background: transparent; color: inherit; cursor: pointer; }
+.form-status { font-size: 12px; min-height: 18px; }
+
+.site-footer { color: var(--paper); background: var(--ink); padding: 70px 4vw 25px; }
+.footer-brand { margin-bottom: 90px; }
+.footer-links { display: grid; grid-template-columns: repeat(3, minmax(120px, 1fr)); max-width: 600px; margin-left: auto; gap: 40px; }
+.footer-links div { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.footer-links p { color: rgba(241,238,231,.4); font-size: 9px; letter-spacing: .15em; text-transform: uppercase; margin: 0 0 8px; }
+.footer-links a { font-size: 13px; }
+.footer-bottom { border-top: 1px solid rgba(241,238,231,.16); margin-top: 75px; padding-top: 23px; display: flex; justify-content: space-between; color: rgba(241,238,231,.45); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+
+.cart-drawer { position: fixed; inset: 0 0 0 auto; width: min(480px, 100%); z-index: 300; background: var(--paper); padding: 30px; transform: translateX(101%); transition: transform .4s cubic-bezier(.2,.75,.2,1); display: flex; flex-direction: column; }
+.cart-drawer.open { transform: translateX(0); }
+.cart-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+.cart-header h2 { margin: 0; font: 500 28px "Manrope", sans-serif; }
+.cart-close { text-decoration: underline; font-size: 12px; }
+.cart-items { flex: 1; overflow: auto; }
+.cart-empty { margin: auto; text-align: center; }
+.cart-empty p { font: 500 23px "Manrope", sans-serif; }
+.cart-empty a { border-bottom: 1px solid; font-size: 12px; }
+.cart-item { display: grid; grid-template-columns: 86px 1fr auto; gap: 15px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.cart-item-thumb { background: var(--paper-2); aspect-ratio: 1; display: grid; place-items: center; overflow: hidden; }
+.cart-item-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.cart-item h3 { margin: 4px 0 7px; font: 600 13px "Manrope", sans-serif; }
+.cart-item p { margin: 0; font-size: 11px; color: rgba(25,26,22,.55); }
+.cart-remove { align-self: start; border: 0; background: transparent; cursor: pointer; font-size: 16px; }
+.cart-footer { border-top: 1px solid var(--line); padding-top: 23px; }
+.cart-footer > div { display: flex; justify-content: space-between; font-size: 13px; }
+.checkout-button { width: 100%; min-height: 54px; margin-top: 22px; background: var(--ink); color: var(--paper); border: 1px solid var(--ink); cursor: pointer; }
+.checkout-button:hover { background: transparent; color: var(--ink); }
+.cart-footer p { text-align: center; font-size: 10px; color: rgba(25,26,22,.5); }
+.page-overlay { position: fixed; inset: 0; z-index: 200; background: rgba(14,15,12,.5); backdrop-filter: blur(3px); }
+
+.product-modal { position: fixed; z-index: 400; inset: 4vh 4vw; background: var(--paper); display: grid; grid-template-columns: 1.15fr .85fr; transform: translateY(20px) scale(.98); opacity: 0; pointer-events: none; transition: .3s; max-height: 92vh; overflow: auto; }
+.product-modal.open { transform: none; opacity: 1; pointer-events: auto; }
+.modal-close { position: absolute; right: 18px; top: 12px; z-index: 2; font-size: 32px; font-weight: 300; }
+.modal-art { min-height: 650px; display: grid; place-items: center; background: #ded5c7; padding: 0; overflow: hidden; }
+.modal-art img { width: 100%; height: 100%; max-height: 92vh; object-fit: cover; }
+.modal-copy { padding: clamp(45px, 7vw, 100px); display: flex; flex-direction: column; justify-content: center; }
+.modal-copy h2 { font: 500 clamp(38px, 4vw, 62px)/1 "Manrope", sans-serif; letter-spacing: -.05em; margin: 22px 0 12px; }
+.modal-price { font-weight: 600; }
+.modal-copy > p:not(.eyebrow):not(.modal-price) { color: rgba(25,26,22,.6); line-height: 1.65; font-size: 14px; }
+.size-picker { border: 0; padding: 0; margin: 26px 0; display: flex; gap: 8px; }
+.size-picker legend { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+.size-picker label { width: 44px; height: 44px; border: 1px solid var(--line); display: grid; place-items: center; cursor: pointer; font-size: 11px; }
+.size-picker label:has(input:checked) { background: var(--ink); color: var(--paper); }
+.size-picker input { position: absolute; opacity: 0; }
+.modal-copy details { border-top: 1px solid var(--line); padding: 16px 0; font-size: 12px; }
