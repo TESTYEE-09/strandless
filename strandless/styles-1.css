@@ -1,0 +1,65 @@
+
+.hero-note { position: absolute; left: calc(52% + 2.3vw); bottom: 27px; display: flex; align-items: end; gap: 30px; }
+.hero-note span { font-size: 9px; letter-spacing: .14em; writing-mode: vertical-rl; transform: rotate(180deg); }
+.hero-note p { font: 500 12px/1.45 "Manrope", sans-serif; margin: 0; }
+
+.manifesto { padding: 130px 4vw; display: grid; grid-template-columns: 1fr 2.25fr .7fr; gap: 6vw; align-items: start; border-bottom: 1px solid var(--line); }
+.manifesto-copy { font: 500 clamp(30px, 4vw, 62px)/1.08 "Manrope", sans-serif; letter-spacing: -.045em; }
+.manifesto-copy p { margin: 0 0 32px; }
+.manifesto-copy p:last-child { color: rgba(25,26,22,.38); }
+.manifesto-copy em { color: var(--ink); font-style: normal; }
+.orbit-mark { width: 148px; aspect-ratio: 1; border: 1px solid var(--line); border-radius: 50%; position: relative; display: grid; place-items: center; margin-top: 90px; }
+.orbit-mark span { position: absolute; font-size: 8px; letter-spacing: .17em; animation: spin 18s linear infinite; width: 100%; height: 100%; display: grid; place-items: start center; padding-top: 5px; }
+.orbit-mark span::after { content: "BE FREE · STAND FIRM ·"; position: absolute; bottom: 6px; transform: rotate(180deg); }
+.orbit-mark b { font-weight: 400; font-size: 20px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.shop-section { padding: 125px 3vw 145px; }
+.section-heading { display: flex; justify-content: space-between; align-items: end; margin-bottom: 55px; }
+.section-heading h2, .story-heading h2 { font: 500 clamp(42px, 5vw, 72px)/1 "Manrope", sans-serif; letter-spacing: -.055em; margin: 20px 0 0; }
+.filters { display: flex; gap: 8px; flex-wrap: wrap; }
+.filter { border: 1px solid var(--line); background: transparent; border-radius: 100px; padding: 9px 15px; font-size: 11px; cursor: pointer; }
+.filter.active, .filter:hover { color: var(--paper); background: var(--ink); border-color: var(--ink); }
+.product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 72px 18px; }
+.product-card.hidden { display: none; }
+.product-image { width: 100%; aspect-ratio: .88; border: 0; overflow: hidden; cursor: pointer; position: relative; padding: 0; background: #ddd4c6; }
+.product-image > img { width: 100%; height: 100%; object-fit: cover; transition: transform .75s cubic-bezier(.2,.75,.2,1), filter .35s ease; }
+.product-image:hover > img { transform: scale(1.025); }
+.product-image::after { content: ""; position: absolute; inset: 0; border: 1px solid rgba(25,26,22,.08); pointer-events: none; }
+.badge { position: absolute; z-index: 2; top: 18px; left: 18px; border: 1px solid var(--ink); background: rgba(241,238,231,.72); backdrop-filter: blur(8px); border-radius: 100px; padding: 7px 10px; font-size: 9px; text-transform: uppercase; letter-spacing: .12em; }
+.badge-light { color: var(--paper); border-color: rgba(255,255,255,.7); background: rgba(20,20,18,.35); }
+.image-corner { position: absolute; z-index: 2; right: 18px; bottom: 16px; font-size: 9px; letter-spacing: .16em; }
+.image-corner.light { color: white; }
+.product-info { display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: start; padding-top: 17px; }
+.product-info h3 { font: 600 15px/1.2 "Manrope", sans-serif; margin: 0 0 6px; }
+.product-info p { margin: 0; font-size: 12px; color: rgba(25,26,22,.53); }
+.product-buy { display: flex; align-items: center; gap: 17px; font-size: 12px; }
+.add-to-cart { border: 0; border-bottom: 1px solid var(--ink); background: transparent; padding: 0 0 3px; cursor: pointer; }
+.add-to-cart:hover { opacity: .55; }
+
+.faith-feature { min-height: 820px; display: grid; grid-template-columns: 1fr 1fr; background: var(--ink); color: var(--paper); }
+.faith-visual { display: grid; place-items: stretch; background: #b9aa97; position: relative; overflow: hidden; padding: 0; }
+.faith-visual > img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s cubic-bezier(.2,.75,.2,1); }
+.faith-feature:hover .faith-visual > img { transform: scale(1.015); }
+.faith-visual::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 100px rgba(25,26,22,.16); pointer-events: none; }
+.faith-visual-caption { position: absolute; z-index: 2; left: 26px; right: 26px; bottom: 23px; display: flex; justify-content: space-between; color: rgba(255,255,255,.82); font-size: 9px; letter-spacing: .18em; }
+.faith-copy { padding: clamp(75px, 9vw, 140px); display: flex; flex-direction: column; justify-content: center; }
+.faith-copy h2 { font: 500 clamp(52px, 6vw, 95px)/.92 "Manrope", sans-serif; letter-spacing: -.065em; margin: 35px 0; }
+.faith-copy > p:not(.section-index) { color: rgba(241,238,231,.65); max-width: 540px; font-size: 16px; line-height: 1.65; }
+.faith-copy blockquote { border-left: 1px solid rgba(241,238,231,.35); margin: 35px 0; padding: 8px 0 8px 21px; font: 500 15px/1.4 "Manrope", sans-serif; }
+.faith-copy .button { align-self: flex-start; margin-top: 12px; }
+
+.editorial-strip { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--line); }
+.editorial-strip > div { min-height: 230px; padding: 35px 3vw; border-right: 1px solid var(--line); display: flex; flex-direction: column; justify-content: space-between; }
+.editorial-strip > div:last-child { border-right: 0; }
+.editorial-strip span { font-size: 10px; letter-spacing: .15em; }
+.editorial-strip p { margin: 0; font: 500 clamp(19px, 2vw, 29px)/1.08 "Manrope", sans-serif; letter-spacing: -.035em; }
+
+
+.campaign-section { position: relative; display: grid; grid-template-columns: .82fr 1.18fr; grid-template-rows: auto auto; padding: 130px 4vw 160px; gap: 24px; background: #d9d0c2; overflow: hidden; border-bottom: 1px solid var(--line); }
+.campaign-copy { padding: 40px 6vw 60px 0; align-self: center; position: relative; z-index: 2; }
+.campaign-copy h2 { margin: 27px 0 28px; font: 500 clamp(48px, 6vw, 92px)/.92 "Manrope", sans-serif; letter-spacing: -.067em; }
+.campaign-copy > p:not(.section-index) { max-width: 580px; color: rgba(25,26,22,.65); line-height: 1.7; font-size: 15px; }
+.campaign-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 42px; }
+.campaign-meta span { border: 1px solid rgba(25,26,22,.28); border-radius: 999px; padding: 8px 11px; font-size: 8px; letter-spacing: .16em; }
+.campaign-image { margin: 0; position: relative; overflow: hidden; background: #bfb4a4; }

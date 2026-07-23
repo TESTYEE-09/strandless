@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Strandless — independent Australian clothing by Ethan Dart. Everyday streetwear and faith-led pieces, designed without noise." />
+  <meta name="theme-color" content="#f1eee7" />
+  <meta property="og:title" content="Strandless — Worn Free" />
+  <meta property="og:description" content="Independent Australian clothing by Ethan Dart. Everyday streetwear and faith-led pieces." />
+  <meta property="og:image" content="assets/images/hero.svg" />
+  <title>Strandless — Worn Free</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-0.css" />
+  <link rel="stylesheet" href="styles-1.css" />
+  <link rel="stylesheet" href="styles-2.css" />
+  <link rel="stylesheet" href="styles-3.css" />
+</head>
+<body>
+  <div class="announcement" role="status">
+    <span>Free Australian shipping over $120</span>
+    <span aria-hidden="true">✦</span>
+    <span>Small-run release 001</span>
+  </div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Strandless home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <path d="M7 10.5C12 6 18 6 23 10.5S34 15 37 10.5"/>
+        <path d="M3 29.5C8 25 14 25 19 29.5S30 34 33 29.5"/>
+        <path d="M20 4v32"/>
+      </svg>
+      <span>STRANDLESS</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#shop">Shop</a>
+      <a href="#faith">Faith line</a>
+      <a href="#story">Our story</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-button search-toggle" type="button" aria-label="Open search" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+      </button>
+      <button class="cart-button" type="button" aria-label="Open shopping bag">
+        Bag <span class="cart-count" aria-live="polite">0</span>
+      </button>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+
+    <div class="search-panel" aria-hidden="true">
+      <label for="site-search">Search the collection</label>
+      <div class="search-row">
+        <input id="site-search" type="search" placeholder="Try “hoodie” or “faith”" autocomplete="off" />
+        <button class="search-close" type="button" aria-label="Close search">Close</button>
+      </div>
+      <div class="search-results" aria-live="polite"></div>
+    </div>
+
+    <nav class="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="#shop">Shop <span>01</span></a>
+      <a href="#faith">Faith line <span>02</span></a>
+      <a href="#story">Our story <span>03</span></a>
+      <p>Independent clothing by Ethan Dart.<br>Designed in Australia.</p>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-art">
+        <img src="assets/images/hero.svg" alt="Model wearing a neutral Strandless tee beside coastal concrete architecture" width="1254" height="1254" fetchpriority="high" />
+        <div class="hero-image-label" aria-hidden="true">
+          <span>COAST / 001</span>
+          <span>AUSTRALIA</span>
+        </div>
+        <div class="hero-cross" aria-hidden="true"><i></i><i></i></div>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Independent Australian clothing</p>
+        <h1 id="hero-title">Nothing<br>holding you.</h1>
+        <p class="hero-intro">Everyday pieces for people becoming who they were made to be. Quietly bold, locally designed and built beyond the trend cycle.</p>
+        <div class="hero-cta">
+          <a class="button button-dark" href="#shop">Shop release 001</a>
+          <a class="text-link" href="#faith">Explore the faith line <span>↘</span></a>
+        </div>
+      </div>
+      <div class="hero-note">
+        <span>STRANDLESS /ˈSTRANDLƏS/</span>
+        <p>Not tied down.<br>Not made to blend in.</p>
+      </div>
+    </section>
+
+    <section class="manifesto" aria-label="Brand statement">
+      <p class="section-index">01 / THE IDEA</p>
+      <div class="manifesto-copy reveal">
+        <p>Clothes can say something without shouting.</p>
+        <p>Strandless is made for the space between <em>belief</em> and everyday life. A local label by Ethan Dart, shaped by faith, freedom and the Australian way of keeping things real.</p>
+      </div>
+      <div class="orbit-mark" aria-hidden="true">
+        <span>BE FREE · STAND FIRM · BE FREE · STAND FIRM · </span>
+        <b>✦</b>
+      </div>
+    </section>
+
+    <section class="shop-section" id="shop" aria-labelledby="shop-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-index">02 / RELEASE 001</p>
+          <h2 id="shop-title">Built for the everyday.</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Filter products">
+          <button class="filter active" data-filter="all" type="button">All</button>
+          <button class="filter" data-filter="tees" type="button">Tees</button>
+          <button class="filter" data-filter="layers" type="button">Layers</button>
+          <button class="filter" data-filter="accessories" type="button">Accessories</button>
+        </div>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card reveal" data-category="tees" data-name="Unbound Heavy Tee" data-price="54" data-image="assets/images/unbound.svg">
+          <button class="product-image" type="button" aria-label="View Unbound Heavy Tee">
+            <span class="badge">New</span>
+            <img src="assets/images/unbound.svg" alt="Bone oversized Strandless tee" width="1167" height="1347" loading="lazy" />
+            <span class="image-corner" aria-hidden="true">01</span>
+          </button>
+          <div class="product-info">
+            <div><h3>Unbound Heavy Tee</h3><p>Bone / 260 GSM cotton</p></div>
+            <div class="product-buy"><span>$54 AUD</span><button class="add-to-cart" type="button">Add</button></div>
+          </div>
+        </artic
