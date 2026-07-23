@@ -1,0 +1,105 @@
+:root {
+  --ink: #191a16;
+  --paper: #f1eee7;
+  --paper-2: #e8e3d8;
+  --cream: #faf8f3;
+  --clay: #a65d40;
+  --olive: #69705a;
+  --line: rgba(25, 26, 22, .18);
+  --radius: 2px;
+  --header-h: 82px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
+}
+body.locked { overflow: hidden; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+button { color: inherit; }
+img, svg { display: block; max-width: 100%; }
+::selection { background: var(--ink); color: var(--paper); }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+.announcement {
+  height: 29px; padding: 0 3vw; color: var(--paper); background: var(--ink);
+  display: flex; align-items: center; justify-content: center; gap: 22px;
+  font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+}
+
+.site-header {
+  height: var(--header-h); padding: 0 3vw; display: grid; grid-template-columns: 1fr auto 1fr;
+  align-items: center; border-bottom: 1px solid var(--line); position: sticky; top: 0;
+  z-index: 100; background: rgba(241, 238, 231, .88); backdrop-filter: blur(18px);
+}
+.brand { display: inline-flex; align-items: center; gap: 11px; font: 700 15px/1 "Manrope", sans-serif; letter-spacing: .13em; width: max-content; }
+.brand-mark { width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-width: 1.5; }
+.desktop-nav { display: flex; align-items: center; gap: 38px; font-size: 13px; }
+.desktop-nav a, .footer-links a { position: relative; }
+.desktop-nav a::after, .footer-links a::after {
+  content: ""; position: absolute; left: 0; right: 100%; bottom: -5px; height: 1px;
+  background: currentColor; transition: right .25s ease;
+}
+.desktop-nav a:hover::after, .footer-links a:hover::after { right: 0; }
+.header-actions { justify-self: end; display: flex; align-items: center; gap: 10px; }
+.icon-button, .cart-button, .menu-toggle, .search-close, .cart-close, .modal-close {
+  border: 0; background: transparent; cursor: pointer;
+}
+.icon-button { width: 39px; height: 39px; display: grid; place-items: center; }
+.icon-button svg { width: 19px; fill: none; stroke: currentColor; stroke-width: 1.5; }
+.cart-button { padding: 10px 0 10px 14px; font-size: 13px; display: flex; gap: 8px; }
+.cart-count { min-width: 20px; height: 20px; border: 1px solid var(--ink); border-radius: 50%; display: grid; place-items: center; font-size: 10px; }
+.menu-toggle { display: none; width: 38px; height: 38px; padding: 11px 7px; }
+.menu-toggle span { display: block; height: 1px; background: var(--ink); margin: 5px 0; transition: .25s; }
+
+.search-panel {
+  position: absolute; inset: 0; min-height: 195px; padding: 30px 4vw; background: var(--paper);
+  border-bottom: 1px solid var(--ink); transform: translateY(-120%); opacity: 0; pointer-events: none;
+  transition: transform .35s cubic-bezier(.2,.75,.2,1), opacity .2s; z-index: 3;
+}
+.search-panel.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+.search-panel label { display: block; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 14px; }
+.search-row { display: flex; align-items: center; gap: 30px; }
+.search-row input { width: 100%; border: 0; border-bottom: 1px solid var(--ink); background: transparent; font: 500 clamp(26px, 5vw, 55px)/1.2 "Manrope", sans-serif; padding: 0 0 9px; outline: 0; }
+.search-row input::placeholder { color: rgba(25,26,22,.28); }
+.search-close { font-size: 12px; text-decoration: underline; }
+.search-results { margin-top: 14px; font-size: 12px; }
+.mobile-nav { display: none; }
+
+.hero {
+  min-height: calc(100vh - 111px); display: grid; grid-template-columns: 52% 48%; position: relative;
+  border-bottom: 1px solid var(--line);
+}
+.hero-art { grid-column: 1; grid-row: 1; overflow: hidden; min-height: 700px; border-right: 1px solid var(--line); position: relative; background: #c9c0b3; }
+.hero-art > img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 1.2s cubic-bezier(.2,.75,.2,1); }
+.hero:hover .hero-art > img { transform: scale(1.018); }
+.hero-art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 58%, rgba(17,17,14,.3)); pointer-events: none; }
+.hero-image-label { position: absolute; z-index: 2; inset: auto 24px 21px; display: flex; justify-content: space-between; color: #fff; font-size: 9px; letter-spacing: .18em; text-transform: uppercase; }
+.hero-cross { position: absolute; z-index: 2; top: 26px; left: 25px; width: 34px; height: 34px; opacity: .8; }
+.hero-cross i { position: absolute; background: rgba(255,255,255,.9); display: block; }
+.hero-cross i:first-child { width: 1px; height: 34px; left: 16px; }
+.hero-cross i:last-child { height: 1px; width: 34px; top: 16px; }
+.hero-copy { grid-column: 2; grid-row: 1; padding: clamp(60px, 8vw, 130px) 6vw 110px; display: flex; flex-direction: column; justify-content: center; }
+.eyebrow, .section-index { margin: 0; font-size: 10px; letter-spacing: .17em; text-transform: uppercase; }
+.hero h1 { margin: 24px 0 30px; font: 500 clamp(64px, 8vw, 132px)/.85 "Manrope", sans-serif; letter-spacing: -.075em; }
+.hero-intro { max-width: 490px; font-size: clamp(16px, 1.35vw, 20px); line-height: 1.55; color: rgba(25,26,22,.72); }
+.hero-cta { margin-top: 36px; display: flex; align-items: center; gap: 29px; flex-wrap: wrap; }
+.button { min-height: 53px; padding: 0 23px; border: 1px solid var(--ink); display: inline-flex; align-items: center; justify-content: center; font-size: 12px; letter-spacing: .05em; cursor: pointer; transition: transform .2s, background .2s, color .2s; }
+.button:hover { transform: translateY(-2px); }
+.button-dark { background: var(--ink); color: var(--paper); }
+.button-dark:hover { background: transparent; color: var(--ink); }
+.button-light { color: var(--paper); border-color: var(--paper); }
+.button-light:hover { background: var(--paper); color: var(--ink); }
+.text-link { display: inline-flex; align-items: center; gap: 13px; font-size: 13px; border-bottom: 1px solid var(--ink); padding-bottom: 5px; width: max-content; }
+.text-link span { font-size: 16px; transition: transform .2s; }
+.text-link:hover span { transform: translate(3px, 3px); }
