@@ -1,36 +1,37 @@
 le>
 
-        <article class="product-card reveal" data-category="layers" data-name="Found Hoodie" data-price="92" data-image="assets/images/hoodie.svg">
-          <button class="product-image" type="button" aria-label="View Found Hoodie">
-            <span class="badge badge-light">Limited</span>
-            <img src="assets/images/hoodie.svg" alt="Faded black Strandless hoodie" width="1167" height="1347" loading="lazy" />
+        <article class="product-card reveal" data-category="layers" data-name="Stand Firm Hoodie" data-price="92" data-image="assets/images/hoodie.svg">
+          <button class="product-image" type="button" aria-label="View Stand Firm Hoodie">
+            <span class="badge badge-light">Stand Firm</span>
+            <img src="assets/images/hoodie.svg" alt="Faded black Christian hoodie with Ethan Dart portrait and 1 Corinthians 16:13 artwork" width="1167" height="1347" loading="lazy" />
             <span class="image-corner light" aria-hidden="true">02</span>
           </button>
           <div class="product-info">
-            <div><h3>Found Hoodie</h3><p>Faded black / heavyweight fleece</p></div>
+            <div><h3>Stand Firm Hoodie</h3><p>Faded black / 1 Corinthians 16:13</p></div>
             <div class="product-buy"><span>$92 AUD</span><button class="add-to-cart" type="button">Add</button></div>
           </div>
         </article>
 
-        <article class="product-card reveal" data-category="tees" data-name="The Way Box Tee" data-price="58" data-image="assets/images/way-tee.svg">
-          <button class="product-image" type="button" aria-label="View The Way Box Tee">
-            <span class="badge">Faith line</span>
-            <img src="assets/images/way-tee.svg" alt="Earth brown The Way box tee" width="1167" height="1347" loading="lazy" />
+        <article class="product-card reveal" data-category="tees" data-name="The Way Portrait Tee" data-price="58" data-image="assets/images/way-tee.svg">
+          <button class="product-image" type="button" aria-label="View The Way Portrait Tee">
+            <span class="badge">The Way</span>
+            <img src="assets/images/way-tee.svg" alt="Earth brown Christian tee with Ethan Dart portrait and John 14:6 artwork" width="1167" height="1347" loading="lazy" />
             <span class="image-corner" aria-hidden="true">03</span>
           </button>
           <div class="product-info">
-            <div><h3>The Way Box Tee</h3><p>Earth / relaxed box fit</p></div>
+            <div><h3>The Way Portrait Tee</h3><p>Earth / John 14:6</p></div>
             <div class="product-buy"><span>$58 AUD</span><button class="add-to-cart" type="button">Add</button></div>
           </div>
         </article>
 
-        <article class="product-card reveal" data-category="accessories" data-name="Still Cap" data-price="36" data-image="assets/images/cap.svg">
-          <button class="product-image" type="button" aria-label="View Still Cap">
-            <img src="assets/images/cap.svg" alt="Olive Strandless embroidered cap" width="1167" height="1347" loading="lazy" />
+        <article class="product-card reveal" data-category="accessories" data-name="Be Still Cap" data-price="36" data-image="assets/images/cap.svg">
+          <button class="product-image" type="button" aria-label="View Be Still Cap">
+            <span class="badge">Be Still</span>
+            <img src="assets/images/cap.svg" alt="Olive Christian cap with Ethan Dart portrait patch and Psalm 46:10 embroidery" width="1167" height="1347" loading="lazy" />
             <span class="image-corner" aria-hidden="true">04</span>
           </button>
           <div class="product-info">
-            <div><h3>Still Cap</h3><p>Olive / embroidered mark</p></div>
+            <div><h3>Be Still Cap</h3><p>Olive / Psalm 46:10</p></div>
             <div class="product-buy"><span>$36 AUD</span><button class="add-to-cart" type="button">Add</button></div>
           </div>
         </article>
@@ -45,7 +46,7 @@ le>
       <div class="faith-copy reveal">
         <p class="section-index">03 / FAITH LINE</p>
         <h2>Not merch.<br>A reminder.</h2>
-        <p>The faith line carries meaning in a way that still feels wearable. No loud slogans. No forced aesthetic. Just considered pieces built around truth, grace and the courage to stand firm.</p>
+        <p>Every piece in Release 001 is openly Christian. Ethan Dart’s stylised portrait becomes the collection mark, paired with scripture about being made new, standing firm, following The Way and being still in God’s presence.</p>
         <blockquote>“I am the way and the truth and the life.”</blockquote>
         <a class="button button-light" href="#shop">Shop The Way</a>
       </div>
