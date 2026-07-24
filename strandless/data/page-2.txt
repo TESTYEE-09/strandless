@@ -32,10 +32,10 @@
       <p class="eyebrow">Release 001</p>
       <h2 id="modal-name"></h2>
       <p class="modal-price"></p>
-      <p>Relaxed unisex fit with a substantial, everyday feel. Designed in Australia and produced as part of a considered small run.</p>
+      <p>A relaxed unisex Christian streetwear piece featuring Ethan Dart’s stylised portrait, a scripture-led graphic and a substantial everyday feel.</p>
       <fieldset class="size-picker"><legend>Select size</legend><label><input type="radio" name="size" value="S">S</label><label><input type="radio" name="size" value="M" checked>M</label><label><input type="radio" name="size" value="L">L</label><label><input type="radio" name="size" value="XL">XL</label></fieldset>
       <button class="button button-dark modal-add" type="button">Add to bag</button>
-      <details><summary>Details</summary><p>Premium construction, woven neck label and understated Strandless finishing.</p></details>
+      <details><summary>Details</summary><p>Stylised portrait artwork of Ethan Dart, scripture reference, premium construction and understated Strandless finishing.</p></details>
       <details><summary>Fit</summary><p>Relaxed fit. Take your normal size or size up for an oversized look.</p></details>
     </div>
   </div>
