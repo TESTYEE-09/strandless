@@ -1,14 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 554" width="480" height="554">
 <defs>
-  <linearGradient id="olive" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7d8264" stop-opacity=".54"/><stop offset="1" stop-color="#4f553f" stop-opacity=".66"/></linearGradient>
-  <linearGradient id="shade" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ede8df" stop-opacity=".03"/><stop offset="1" stop-color="#11120f" stop-opacity=".25"/></linearGradient>
-  <filter id="grade"><feColorMatrix type="saturate" values=".42"/><feComponentTransfer><feFuncR type="linear" slope=".97"/><feFuncG type="linear" slope="1.01"/><feFuncB type="linear" slope=".9"/></feComponentTransfer></filter>
-  <filter id="grain"><feTurbulence baseFrequency=".84" numOctaves="3" seed="13"/><feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 .05 0"/></filter>
+<filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+  <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#171712" flood-opacity=".25"/>
+</filter>
+<filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+  <feGaussianBlur stdDeviation="18"/>
+</filter>
+<filter id="mono">
+  <feColorMatrix type="saturate" values=".12"/>
+  <feComponentTransfer><feFuncR type="linear" slope="1.08"/><feFuncG type="linear" slope="1.04"/><feFuncB type="linear" slope=".96"/></feComponentTransfer>
+</filter>
+<pattern id="grain" width="90" height="90" patternUnits="userSpaceOnUse">
+  <filter id="noise"><feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="2" seed="11"/></filter>
+  <rect width="90" height="90" filter="url(#noise)" opacity=".055"/>
+</pattern>
 </defs>
-<rect width="480" height="554" fill="#5d634b"/>
-<image width="480" height="554" preserveAspectRatio="xMidYMid slice" filter="url(#grade)" href="https://images.pexels.com/photos/16117426/pexels-photo-16117426.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1100"/>
-<rect width="480" height="554" fill="url(#olive)" style="mix-blend-mode:multiply"/>
-<rect width="480" height="554" fill="url(#shade)"/>
-<rect width="480" height="554" filter="url(#grain)" opacity=".5"/>
-<g fill="#f0ece3" font-family="Arial,sans-serif" font-size="7" letter-spacing="2"><text x="20" y="27">04 / STILL CAP</text><text x="460" y="529" text-anchor="end">OLIVE / EMBROIDERED MARK</text></g>
+
+<rect width="480" height="554" fill="#d6d3c6"/>
+<ellipse cx="245" cy="427" rx="151" ry="22" fill="#1a1a16" opacity=".17" filter="url(#soft)"/>
+<g filter="url(#shadow)">
+  <path d="M111 313c0-101 62-171 144-171 76 0 130 57 130 146v37H111z" fill="#666c4e"/>
+  <path d="M111 313h274c24 0 50 20 63 46-72-15-144-19-217-12-52 5-95 17-134 31 1-32 6-52 14-65z" fill="#52583f"/>
+  <path d="M255 142v179" stroke="#858a6d" stroke-width="3" opacity=".5"/>
+  <ellipse cx="255" cy="235" rx="55" ry="61" fill="#ece7db"/>
+  <clipPath id="faceclip4"><ellipse cx="255" cy="235" rx="48" ry="54"/></clipPath>
+  <image href="ethan-face.svg" x="207" y="181" width="96" height="108" preserveAspectRatio="xMidYMid slice" clip-path="url(#faceclip4)" filter="url(#mono)"/>
+  <path d="M255 174v122M209 235h92" stroke="#5b6046" stroke-width="3" opacity=".8"/>
+  <text x="255" y="314" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#ece7db">GRACE &gt; FEAR</text>
+</g>
+<text x="24" y="32" font-family="Arial,sans-serif" font-size="10" letter-spacing="2" fill="#4d5040">STRANDLESS / 2 TIMOTHY 1:7</text>
+<text x="456" y="527" text-anchor="end" font-family="Arial,sans-serif" font-size="9" letter-spacing="1.5" fill="#4d5040">ETHAN DART PORTRAIT EDITION</text>
+<rect width="480" height="554" fill="url(#grain)"/>
+
 </svg>
