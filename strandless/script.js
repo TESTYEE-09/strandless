@@ -1,3 +1,51 @@
+const editorialImages = {
+  hero: 'https://images.pexels.com/photos/28993967/pexels-photo-28993967.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  unbound: 'https://images.pexels.com/photos/6786611/pexels-photo-6786611.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  hoodie: 'https://images.pexels.com/photos/19461550/pexels-photo-19461550.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  way: 'assets/images/way-tee.svg',
+  cap: 'https://images.pexels.com/photos/16117426/pexels-photo-16117426.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  poster: 'assets/images/poster.svg',
+  coastal: 'https://images.pexels.com/photos/28994261/pexels-photo-28994261.jpeg?auto=compress&cs=tinysrgb&w=1400',
+  details: 'https://images.pexels.com/photos/7432217/pexels-photo-7432217.jpeg?auto=compress&cs=tinysrgb&w=1200'
+};
+
+function applyEditorialImages() {
+  const setImage = (selector, src, alt, position = 'center') => {
+    const image = document.querySelector(selector);
+    if (!image) return;
+    image.src = src;
+    image.alt = alt;
+    image.style.objectPosition = position;
+  };
+
+  setImage('.hero-art > img', editorialImages.hero, 'Model wearing a dark layer beside brutalist concrete architecture', 'center 48%');
+  setImage('.faith-visual > img', editorialImages.poster, 'The Way campaign poster inspired by John 14:6');
+  setImage('.campaign-image-wide img', editorialImages.coastal, 'Strandless concrete and coast lookbook campaign', 'center 44%');
+  setImage('.campaign-image-detail img', editorialImages.details, 'Close-up study of washed cotton and garment construction', 'center');
+
+  const products = {
+    'Unbound Heavy Tee': [editorialImages.unbound, 'Bone oversized tee mockup', 'center 48%'],
+    'Found Hoodie': [editorialImages.hoodie, 'Faded black heavyweight hoodie', 'center 48%'],
+    'The Way Box Tee': [editorialImages.way, 'Earth brown The Way box tee', 'center'],
+    'Still Cap': [editorialImages.cap, 'Olive embroidered cap detail', 'center']
+  };
+
+  document.querySelectorAll('.product-card').forEach(card => {
+    const replacement = products[card.dataset.name];
+    if (!replacement) return;
+    const [src, alt, position] = replacement;
+    card.dataset.image = src;
+    const image = card.querySelector('.product-image img');
+    if (image) {
+      image.src = src;
+      image.alt = alt;
+      image.style.objectPosition = position;
+    }
+  });
+}
+
+applyEditorialImages();
+
 const body = document.body;
 const overlay = document.querySelector('.page-overlay');
 const cartDrawer = document.querySelector('.cart-drawer');
